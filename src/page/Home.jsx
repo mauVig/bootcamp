@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Login from '../components/home/Login';
 import Register from '../components/home/Register';
-import { useForm } from '../hooks/useForm';
 
 export default function Home() {
   const [watch, setWatch] = useState(true);
 
-  
-
   return (
-    <div className="max-w-xs sm:max-w-md mx-auto pt-8 ">
+    <div 
+      className="flex justify-center items-center"
+      style={{ height: 'calc(100vh - 40px)' }}
+      >
       {watch ? (
         <Login stateWatch={setWatch} />
       ) : (

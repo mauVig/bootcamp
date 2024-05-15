@@ -27,6 +27,6 @@ export const setErrorMsgRegister = (res) => {
 }
 
 
-export const setErrorMsgCreatAndEdit = (res) => { 
+export const setErrorMsgCreatAndEdit = () => { 
     msg = "Hubo un error en el servidor"
 }

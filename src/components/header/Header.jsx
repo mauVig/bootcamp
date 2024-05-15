@@ -48,9 +48,11 @@ export default function Header() {
             <div>
               {userData.email && (
                 <div className="flex gap-4 items-center">
-                  <div className="flex gap-1">
-                    <UserLog />
-                    <h2>{userData.email}</h2>
+                  <div className='hidden md:block'>
+                    <div className="flex gap-1">
+                      <UserLog />
+                      <h2>{userData.email}</h2>
+                    </div>
                   </div>
                   <Button variant="light" onClick={handlerSession}>
                     Cerrar sesion

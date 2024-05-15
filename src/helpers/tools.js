@@ -17,3 +17,13 @@ export const showArrBuy = (arr) => {
   }
   return obj;
 };
+
+export const limitCharacters = (input) =>{
+  const limit = 55
+  
+  if (input.length > limit) {
+    return input.slice(0, limit) + '...';
+  } else {
+    return input;
+  }
+}

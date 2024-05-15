@@ -13,8 +13,8 @@ import FavoritePage from './page/FavoritePage';
 import BuyPage from './page/BuyPage'
 
 function App() {
-  document.title = 'Recetas';
   const { setUserData } = useGlobalContext();
+  document.title = 'Recetas';
 
   useEffect(() => {
     return () => {

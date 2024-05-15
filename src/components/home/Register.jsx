@@ -33,7 +33,7 @@ export default function Register({ stateWatch }) {
           go('/wall')
           return `${data.email} registro correctamente`
         },
-        error: (err) => {
+        error: () => {
           setDisa(false);
           return getErrorMsg()
         }
@@ -47,10 +47,9 @@ export default function Register({ stateWatch }) {
 
   return (
     <Transitions direction='left'>
-      <div className={`p-8 ${BORDER_BLACK}`} >
+      <div className={`p-8 w-[350px] ${BORDER_BLACK}`} >
         <Metric className="text-center mb-8">Registrarse</Metric>
         <div className="grid gap-4">
-          {/*   <TextInput placeholder='Nombre completo' /> */}
           <TextInput
             placeholder='Email'
             name='email'

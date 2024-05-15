@@ -1,6 +1,6 @@
 import { Badge, Button, TextInput, Title } from '@tremor/react';
 import { BODY_CONTAINER, BORDER_BLACK } from '../constant/myConstant';
-import { capitalize } from '../helpers/tools';
+import { capitalize, limitCharacters } from '../helpers/tools';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { back, deleteIco, plus } from '../components/icons';
@@ -170,7 +170,7 @@ export default function CreateAndEdit() {
                   >
                     <Icon.delete className="mr-4 hover:cursor-pointer" />
                     <span className="text-lg">
-                      {capitalize(ingredient.name)}
+                      {limitCharacters(capitalize(ingredient.name))}
                     </span>
                   </span>
                 </Badge>
