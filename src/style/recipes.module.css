@@ -1,0 +1,56 @@
+.target {
+    position: relative;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+.target img{
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+.buttom{
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.greyOpacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(121, 121, 121, 0);
+
+    transition: all .2s ease-in-out;
+}
+@media( max-width: 600px ){
+    .buttom{
+        opacity: 1;        
+    }    
+    .greyOpacity{
+        align-items: end;
+    }
+}
+.target:hover{
+    cursor: pointer;
+}
+.target:hover .greyOpacity {
+    background: rgba(121, 121, 121, .5);
+}
+
+.target:hover img{
+    scale: 1.2;
+}
+.target:hover .buttom{
+    opacity: 1;
+    transform: translateY(0);
+
+}
